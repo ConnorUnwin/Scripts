@@ -1,33 +1,31 @@
-#!/bin/bash
 
 # Variables
 wired=$(ipconfig getifaddr en0)
 wireless=$(ipconfig getifaddr en1)
-router=$(ipconfig getoption en1 router)
+router=$(ipconfig getoption en0 router || ipconfig getoption en1 router)
 
 echo "----------NETWORK INFO---------"
 
 # Check if there is a wired connection
 if [ -z "$wired" ]
 then
-	echo "Ethernet: No IP Address Assigned"
+	echo -e "Wired: \e[1m\e[31mNo IP Address Assigned\e[0m"
 else
-	echo "Wired: $wired"
+	echo -e "Wired: \e[1n\e[32m$wired\e[0m"
 fi
 
 # Check if there is a wireless connection
 if [ -z "$wireless" ]
 then
-	echo "Wireless: No IP Address Assigned"
+	echo -e "Wireless: \e[1m\e[31mNo IP Address Assigned\e[0m"
 else
-	echo "Wireless: $wireless"
+	echo -e "Wireless: \e[1m\e[32m$wireless\e[0m"
 fi
 
 if [ -z "$router" ]
 then
-	echo "No connection to router"
+	echo -e "\e[1m\e[31mNo connection to router\e[0m"
 else
-	echo "Router: $router"
+	echo -e "Router: \e[1m\e[32m$router\e[0m"
 fi
-echo "------------------------------"
-
+echo "-------------------------------"
