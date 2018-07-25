@@ -25,7 +25,10 @@ fi
 if [ -z "$router" ]
 then
 	echo -e "\e[1m\e[31mNo connection to router\e[0m"
+elif [ -z "$(ipconfig getoption en0 router)" ]
+then
+	echo -e "Router: \e[1m\e[32m(en0) $router\e[0m"
 else
-	echo -e "Router: \e[1m\e[32m$router\e[0m"
+	echo -e "Router: \e[1m\e[32m(en1) $router\e[0m"
 fi
 echo "-------------------------------"
