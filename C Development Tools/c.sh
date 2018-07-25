@@ -1,11 +1,9 @@
 
-#!/bin/bash
-
 # A script that is used to compile C program quickls.
 # Checks:
 	# Check file exists before compiling [X]
 	# if $2 is not speficied use $1 but remove extenstion ".c" []
-	# get status code [] 
+	# get status code []
 	# if statement exit code greater than 0. []
 
 # Varibles
