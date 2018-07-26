@@ -11,7 +11,7 @@ if [ -z "$wired" ]
 then
 	echo -e "Wired: \e[1m\e[31mNo IP Address Assigned\e[0m"
 else
-	echo -e "Wired: \e[1n\e[32m$wired\e[0m"
+	echo -e "Wired: \e[1m\e[32m$wired\e[0m"
 fi
 
 # Check if there is a wireless connection
