@@ -1,1 +1,1 @@
-gem install iStats
+sudo gem install iStats
