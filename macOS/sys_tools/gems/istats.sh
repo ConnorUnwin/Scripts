@@ -1,1 +1,1 @@
-get install istats
+gem install istats
