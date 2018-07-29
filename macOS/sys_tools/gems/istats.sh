@@ -1,1 +1,1 @@
-gem install istats
+gem install iStats
