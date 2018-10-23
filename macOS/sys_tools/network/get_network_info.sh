@@ -1,7 +1,7 @@
-
+#!/bin/bash
 # Variables
-wired=$(ipconfig getifaddr en0)
-wireless=$(ipconfig getifaddr en1)
+wired=$(ipconfig getifaddr en1)
+wireless=$(ipconfig getifaddr en0)
 router=$(ipconfig getoption en0 router || ipconfig getoption en1 router)
 
 echo "----------NETWORK INFO---------"
